@@ -1,0 +1,23 @@
+<component name="org.nuxeo.postscript.PostScriptToPDF">
+	<require>org.nuxeo.runtime.started</require>
+	<extension
+    target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+    point="command">
+	  <command name="ps2pdf" enabled="true">
+	    <commandLine>ps2pdf</commandLine>
+	    <parameterString>#{sourceFilePath} #{targetFilePath}</parameterString>
+	    <installationDirective>You need to install GhostScript.
+	    </installationDirective>
+	  </command>
+	</extension>
+	<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
+	  point="converter">
+	  <converter name="ps2pdf"
+	    class="org.nuxeo.ecm.platform.convert.plugins.CommandLineConverter">
+	    <parameters>
+	      <parameter name="CommandLineName">ps2pdf</parameter>
+	    </parameters>
+	  </converter>
+	</extension>
+
+</component>

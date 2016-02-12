@@ -1,0 +1,8 @@
+<component name="org.nuxeo.postscript.PostScriptToPDFConverter">
+
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations" >
+      <operation class="org.nuxeo.postscript.PostScriptToPDFConverter" />
+   </extension>
+    
+</component>

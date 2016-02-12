@@ -6,7 +6,7 @@ This plug-in provides an operation to convert a postscript file to pdf.
 
 ## Build
 
-Assuming maven is correctly setup on your computer go under the nuxeo-es-synonyms folder and run:
+Assuming maven is correctly setup on your computer go under the nuxeo-postscript-to-pdf folder and run:
 
 ```
 mvn install
